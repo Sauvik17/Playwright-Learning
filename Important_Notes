@@ -1,0 +1,70 @@
+npm init playwright@latest - To install Playwright in folder
+
+RUN TESTCASES:
+-------------------
+
+npx playwright test - To Run all test cases
+
+See the browser window: add --headed.
+Run a single project/browser: --project=chromium.
+Run one file: npx playwright test tests/example.spec.ts.
+Open testing UI: --ui.
+
+npx playwright test --project webkit - To run testcase in webkit
+npx playwright test --project webkit --project firefox
+npx playwright test -g "add a todo item" - -g is used to be global 
+
+npx playwright test --last-failed - To run failed testcase in 
+
+npx playwright test --debug - To run debug 
+npx playwright test example.spec.ts --debug
+
+
+
+npx playwright show-report - to show html reports
+npx playwright test --ui - to run test in UI mode
+
+npx playwright install --with-deps - Update Playwright and download new browser binaries and their dependencies:
+
+npx playwright --version - check playwright version
+
+BASIC ACTIONS:
+-----------------------
+
+Action	Description
+locator.check()	Check the input checkbox
+locator.click()	Click the element
+locator.uncheck()	Uncheck the input checkbox
+locator.hover()	Hover mouse over the element
+locator.fill()	Fill the form field, input text
+locator.focus()	Focus the element
+locator.press()	Press single key
+locator.setInputFiles()	Pick files to upload
+locator.selectOption()	Select option in the drop down
+
+BASIC ASSERTIONS
+-------------------------
+
+Assertion	Description
+expect(locator).toBeChecked()	Checkbox is checked
+expect(locator).toBeEnabled()	Control is enabled
+expect(locator).toBeVisible()	Element is visible
+expect(locator).toContainText()	Element contains text
+expect(locator).toHaveAttribute()	Element has attribute
+expect(locator).toHaveCount()	List of elements has given length
+expect(locator).toHaveText()	Element matches text
+expect(locator).toHaveValue()	Input element has value
+expect(page).toHaveTitle()	Page has title
+expect(page).toHaveURL()	Page has URL
+
+toEqual, toContain, toBeTruthy 
+
+TEST HOOKS:
+---------------------
+
+You can use various test hooks such as test.describe to declare a group of tests and test.beforeEach and test.afterEach which are executed before/after each test. Other hooks include the test.beforeAll and test.afterAll which are executed once per worker before/after all tests.
+
+
+
+
+
